@@ -2,7 +2,7 @@
 React Native Starter Project
 
 # IOS
-See documentation in this link: https://facebook.github.io/react-native/docs/getting-started)
+See documentation in this link: https://facebook.github.io/react-native/docs/getting-started
 
 # ANDROID
 First Install Android Studio and install latest stable AVD.
