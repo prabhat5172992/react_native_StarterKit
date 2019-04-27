@@ -1,10 +1,10 @@
-# react_native_StarterKit
+# Rract Native
 React Native Starter Project
 
-#IOS
+# IOS
 See documentation in this link: https://facebook.github.io/react-native/docs/getting-started)
 
-#ANDROID
+# ANDROID
 First Install Android Studio and install latest stable AVD.
 LINK: https://developer.android.com/studio?pkg=studio#downloads
 ==> SET ANDROID_HOME environment variable --> c:\Users\YOUR_USERNAME\AppData\Local\Android\Sdk
@@ -24,12 +24,13 @@ npm install --save react-navigation
 npm install --save react-native-gesture-handler
 react-native link react-native-gesture-handler
 
-ADD + lines in MainActivity.java file
--------------------------------------
+Replace MainActivity.java file with below code
+---------------------------------------------
+package com.myapp;
 import com.facebook.react.ReactActivity;
-+ import com.facebook.react.ReactActivityDelegate;
-+ import com.facebook.react.ReactRootView;
-+ import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+import com.facebook.react.ReactActivityDelegate;
+import com.facebook.react.ReactRootView;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 
 public class MainActivity extends ReactActivity {
 
@@ -38,14 +39,15 @@ public class MainActivity extends ReactActivity {
     return "Example";
   }
 
-+  @Override
-+  protected ReactActivityDelegate createReactActivityDelegate() {
-+    return new ReactActivityDelegate(this, getMainComponentName()) {
-+      @Override
-+      protected ReactRootView createRootView() {
-+       return new RNGestureHandlerEnabledRootView(MainActivity.this);
-+      }
-+    };
-+  }
----------------------------------------
+  @Override
+  protected ReactActivityDelegate createReactActivityDelegate() {
+    return new ReactActivityDelegate(this, getMainComponentName()) {
+      @Override
+      protected ReactRootView createRootView() {
+       return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
+  }
 }
+# NOTE: Replace package and className accordingly
+-------------------------------------------------
