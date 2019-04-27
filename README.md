@@ -18,14 +18,14 @@ React Native app Setup
 4) Go to your app directory and run ==> react-native start
 5) react-native run-android (it will run your app on AVD)
 
-====================================
-For Navigation run below commands
+# NAVIGATION 
+Run below commands
 npm install --save react-navigation
 npm install --save react-native-gesture-handler
 react-native link react-native-gesture-handler
 
 Replace MainActivity.java file with below code
----------------------------------------------
+-----------------------------------------------
 package com.myapp;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
